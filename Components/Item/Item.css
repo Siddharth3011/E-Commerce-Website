@@ -1,0 +1,118 @@
+/* Universal reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrollbar */
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap onto new rows */
+    justify-content: center; /* Center the items horizontally */
+    gap: 16px; /* Add spacing between items */
+    padding: 16px; /* Add padding around the container */
+  }
+  
+  .item {
+    width: 280px; /* Set a consistent width for all items */
+    background-color: #f9f9f9; /* Optional: Add a background color */
+    border: 1px solid #e5e7eb; /* Add a light border */
+    border-radius: 8px; /* Optional: Rounded corners */
+    overflow: hidden; /* Ensure content stays within the item */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px; /* Add spacing inside the item */
+    transition: transform 0.3s ease; 
+  }
+  .item img{
+    width: 280px;
+  }
+  
+  .item:hover {
+    transform: scale(1.05); /* Scale up slightly on hover */
+  }
+  
+  .item-image {
+    width: 100%; /* Ensure the image fits the item's width */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 8px; /* Match the item's rounded corners */
+  }
+  
+  .item p {
+    margin: 12px 0; /* Add spacing around the product name */
+    font-size: 16px;
+    text-align: center;
+    color: #333;
+  }
+  
+  .item-price {
+    display: flex;
+    gap: 8px; /* Adjust spacing between new and old prices */
+    justify-content: center; /* Align prices to the center */
+    margin-top: 8px;
+  }
+  
+  .item-price-new {
+    color: #374151;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  .item-price-old {
+    color: #8c8c8c;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: line-through;
+  }
+  @media(max-width: 1280px){
+    .item{
+      width: 220px;
+      font-size: 14px;
+    }
+    .item img{
+      width: 220px;
+    }
+    .item-price-old{
+      font-size: 14px;
+    }
+  }
+  @media(max-width:1024px){
+    .item{
+      width: 170px;
+      font-size: 13px;
+    }
+    .item img{
+      width: 170px;
+    }
+    .item-price-old{
+      font-size: 13px;
+    }
+  }
+  @media(max-width:800px){
+    .item{
+      width: 120px;
+      font-size: 12px;
+    }
+    .item img{
+      width: 120px;
+    }
+    .item-price-old{
+      font-size: 12px;
+    }
+  }
+  @media(max-width:500px){
+    .item{
+      width: 185px;
+    }
+    .item img{
+      width: 160px;
+    }
+  }
